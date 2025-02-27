@@ -18,11 +18,9 @@ Este projeto utiliza **Docker**, **Python (com Pandas)** e **PostgreSQL** para a
 ```
 📂 projeto
 │-- 📂 data                 # Diretório para armazenar arquivos CSV
-│-- 📂 scripts              # Scripts Python para processamento dos dados
-│   │-- importar_dados.py   # Script para carregar CSV e inserir no PostgreSQL
 │-- 📂 db                   # Configuração do banco de dados
-│   │-- Dockerfile          # Dockerfile para o PostgreSQL
 │   │-- init.sql            # Script SQL para criação de tabelas
+│-- lerXLS.py               # Script para carregar CSV e inserir no PostgreSQL
 │-- docker-compose.yml      # Configuração do ambiente Docker
 │-- requirements.txt        # Dependências do projeto
 │-- README.md               # Documentação do projeto

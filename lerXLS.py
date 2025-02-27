@@ -12,7 +12,7 @@ db_name = "postgres"
 engine = create_engine(f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}")
 
 # ler excel
-df = pd.read_excel("usuario.xlsx", sheet_name="Planilha1", skiprows=1)  # Ajuste o nome da aba se necessário
+df = pd.read_excel("data/usuario.xlsx", sheet_name="Planilha1", skiprows=1)  # Ajuste o nome da aba se necessário
 
 # Inserir os dados no PostgreSQL (substitua 'sua_tabela' pelo nome correto)
 df.to_sql("usuario", engine, if_exists="append", index=False)
