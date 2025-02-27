@@ -11,10 +11,8 @@ db_name = "postgres"
 # Criar a engine do SQLAlchemy
 engine = create_engine(f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}")
 
-# Criar um DataFrame de exemplo
-#data = {"id": [1, 2, 3], "nome": ["Alice", "Bob", "Charlie"]}
-data = {"id": [3], "nome": ["usuario"],"idade" : 30}
-df = pd.DataFrame(data)
+# ler excel
+df = pd.read_excel("usuario.xlsx", sheet_name="Planilha1", skiprows=1)  # Ajuste o nome da aba se necessário
 
 # Inserir os dados no PostgreSQL (substitua 'sua_tabela' pelo nome correto)
 df.to_sql("usuario", engine, if_exists="append", index=False)
