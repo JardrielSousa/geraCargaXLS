@@ -1,0 +1,11 @@
+docker-compose up -d
+
+docker exec -it python_container pip install -r requirements.txt
+
+docker exec -it postgres_container psql -U seu_usuario -d seu_banco
+
+docker exec -it python_container python scripts/lerXLS.py
+
+docker-compose down
+
+docker restart postgres_container

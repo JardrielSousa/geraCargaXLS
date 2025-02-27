@@ -34,8 +34,8 @@ Este projeto utiliza **Docker**, **Python (com Pandas)** e **PostgreSQL** para a
 
 ### 1️⃣ **Clonar o repositório**
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/JardrielSousa/geraCargaXLS.git
+cd geraCargaXLS
 ```
 
 ### 2️⃣ **Criar e iniciar os containers**
@@ -63,7 +63,7 @@ CREATE TABLE usuario (
 
 ### **Acessar o banco de dados PostgreSQL**
 ```bash
-docker exec -it postgres_container psql -U seu_usuario -d seu_banco
+docker exec -it postgres psql -U postgres -d usuario
 ```
 
 Para listar as tabelas:
@@ -76,7 +76,7 @@ Para listar as tabelas:
 ## 📊 Executar o Script Python
 O script **importar_dados.py** lê um arquivo CSV e insere os dados no PostgreSQL.
 ```bash
-docker exec -it python_container python scripts/importar_dados.py
+docker exec -it python_container python lerXLS.py
 ```
 
 ---
@@ -95,6 +95,6 @@ docker restart postgres_container
 ---
 
 ## 📌 Autor
-- [Jardriel ](https://github.com/JardrielSousa)
+- [Jardriel Sousa](https://github.com/JardrielSousa)
 
 Se precisar de ajuda, sinta-se à vontade para abrir uma issue! 🚀
